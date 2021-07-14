@@ -99,24 +99,44 @@ header {
   width: 55.6rem;
   height: 45.6rem;
 }
+.hero-area .hero-img:hover img {
+  animation: bounce 5s linear infinite alternate;
+}
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
 
 /*---------------------------- 
 Player section start
 ----------------------------- */
+.player-warper {
+  margin: 8rem 0;
+}
 .players {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  margin-top: 8rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-row-gap: 2.8rem;
+  grid-column-gap: 3rem;
 }
 .player-card {
-  width: 33rem;
+  /* width: 33rem; */
   /* height: 43rem; */
   padding: 1.5rem;
   box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
   border-radius: 0.5rem;
-  margin-bottom: 2.7rem;
+  /* margin-bottom: 2.7rem; */
 }
 .player-card .player-img img {
   width: 100%;
@@ -132,7 +152,67 @@ Player section start
   color: #6c6c6c;
   font-size: 1.6rem;
 }
-
+/*----------------------------
+ hilight section start
+--------------------------- */
+.hilight-warp {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2rem 0 8rem 0;
+}
+.hilight-warp .hilight-content h1 {
+  font-size: 4.8rem;
+}
+.hilight-warp .hilight-content p {
+  color: #6c6c6c;
+  font-size: 1.6rem;
+  margin: 2rem 0;
+}
+.hilight-warp .hilight-content button {
+  background-color: #e02c6d;
+  padding: 1rem 2rem;
+  color: var(--white);
+}
+.hilight-warp .hilight-content a {
+  color: var(--white);
+  font-size: 1.5rem;
+}
+.hilight-warp .hilight-img img {
+  width: 56.7rem;
+  height: 42.7rem;
+}
+/* -----------------------------
+Gallery section :start
+------------------------------ */
+.gallery-img {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.gallery-img img {
+  width: 100%;
+}
+/* -----------------------------
+Relax section start
+----------------------- */
+.relax-section {
+  margin: 8rem 0;
+}
+.relax-section h1,
+.gallery h1 {
+  width: 20rem;
+  color: #fdf7f9;
+  margin: 1rem auto;
+  text-align: center;
+  font-size: 2.5rem;
+  background-color: #e02c6d;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+}
+.relax-section img {
+  width: 100%;
+}
 /* ----------------------------
 footer section start
 ----------------------------- */
@@ -162,60 +242,12 @@ footer p {
   font-size: 1.8rem;
   color: #000000;
 }
-/*----------------------------
- hilight section start
---------------------------- */
-.hilight-warp {
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  align-items: center;
-  margin: 2rem 0;
-}
-.hilight-warp .hilight-content h1 {
-  font-size: 4.8rem;
-}
-.hilight-warp .hilight-content p {
-  color: #6c6c6c;
-  font-size: 1.6rem;
-  margin: 2rem 0;
-}
-.hilight-warp .hilight-content button {
-  background-color: #e02c6d;
-  padding: 1rem 2rem;
-  color: var(--white);
-}
-.hilight-warp .hilight-content a {
-  color: var(--white);
-  font-size: 1.5rem;
-}
-.hilight-warp .hilight-img img {
-  width: 56.7rem;
-  height: 42.7rem;
-}
-/* -----------------------------
-Relax section start
------------------------ */
-.relax-section {
-  margin: 5rem 0 2rem 0;
-}
-.relax-section h1 {
-  width: 20rem;
-  color: #fdf7f9;
-  margin: 1rem auto;
-  text-align: center;
-  font-size: 2.5rem;
-  background-color: #e02c6d;
-  padding: 1rem 2rem;
-  border-radius: 1rem;
-}
-.relax-section img {
-  width: 100%;
-}
+
 /*------------------------------
  Media Quaries
  ---------------------------- */
-@media (max-width: 600px) {
+/* If the screen size is 600px or less*/
+@media only screen and (max-width: 600px) {
   html {
     font-size: 50%;
   }
@@ -234,7 +266,7 @@ Relax section start
     margin-top: 5rem;
   }
   .players {
-    flex-direction: column;
+    grid-template-columns: repeat(1, 1fr);
   }
   .hilight-warp {
     flex-wrap: wrap;
@@ -252,5 +284,23 @@ Relax section start
   }
   footer .social-icons i {
     margin: 0 0.5rem;
+  }
+}
+/* If the screen size is 601px or more*/
+@media only screen and (min-width: 601px) {
+  .players {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .container {
+    padding: 0 1.6rem;
+  }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 768px) {
+  .players {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .container {
+    padding: 0 15.5rem;
   }
 }
