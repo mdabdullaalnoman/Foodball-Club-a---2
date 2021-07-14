@@ -28,37 +28,6 @@ html {
   overflow-x: hidden;
 }
 
-/*--------------------------
- Header section stat
---------------------------- */
-
-/* header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-top: 4.3rem !important;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  background: var(--violet);
-}
-header nav a {
-  color: var(--white);
-  font-size: 1.6rem;
-  font-weight: 500px;
-  margin-right: 2.4rem;
-}
-header button {
-  background: var(--violet);
-  color: var(--white);
-  font-size: 1.6rem;
-  padding: 1rem 2.4rem;
-} */
-
-/* ------------------------------
-Hero section start
--------------------------------- */
 .container {
   padding: 0 15.5rem;
 }
@@ -304,3 +273,32 @@ footer p {
     padding: 0 15.5rem;
   }
 }
+
+/* trying  */
+/*--------------------------
+ Header section stat
+--------------------------- */
+
+/* header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 4.3rem !important;
+  background: var(--blue);
+}
+header nav a {
+  color: var(--white);
+  font-size: 1.6rem;
+  font-weight: 500px;
+  margin-right: 2.4rem;
+}
+header button {
+  background: var(--violet);
+  color: var(--white);
+  font-size: 1.6rem;
+  padding: 1rem 2.4rem;
+} */
+
+/* ------------------------------
+Hero section start
+-------------------------------- */
