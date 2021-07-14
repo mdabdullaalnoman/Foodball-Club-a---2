@@ -132,6 +132,86 @@ Player section start
   color: #6c6c6c;
   font-size: 1.6rem;
 }
+
+/* ----------------------------
+footer section start
+----------------------------- */
+footer {
+  text-align: center;
+  width: 50%;
+  margin: 6rem auto;
+}
+footer img {
+  width: 60%;
+}
+footer .social-icons {
+  margin: 2rem 0;
+}
+footer .social-icons i {
+  font-size: 1.7rem;
+  color: #969bab;
+  margin: 0 1rem;
+  background-color: #969bab70;
+  border-radius: 50%;
+  padding: 1rem;
+}
+footer .social-icons i:hover {
+  opacity: 80%;
+}
+footer p {
+  font-size: 1.8rem;
+  color: #000000;
+}
+/*----------------------------
+ hilight section start
+--------------------------- */
+.hilight-warp {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2rem 0;
+}
+.hilight-warp .hilight-content h1 {
+  font-size: 4.8rem;
+}
+.hilight-warp .hilight-content p {
+  color: #6c6c6c;
+  font-size: 1.6rem;
+  margin: 2rem 0;
+}
+.hilight-warp .hilight-content button {
+  background-color: #e02c6d;
+  padding: 1rem 2rem;
+  color: var(--white);
+}
+.hilight-warp .hilight-content a {
+  color: var(--white);
+  font-size: 1.5rem;
+}
+.hilight-warp .hilight-img img {
+  width: 56.7rem;
+  height: 42.7rem;
+}
+/* -----------------------------
+Relax section start
+----------------------- */
+.relax-section {
+  margin: 5rem 0 2rem 0;
+}
+.relax-section h1 {
+  width: 20rem;
+  color: #fdf7f9;
+  margin: 1rem auto;
+  text-align: center;
+  font-size: 2.5rem;
+  background-color: #e02c6d;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+}
+.relax-section img {
+  width: 100%;
+}
 /*------------------------------
  Media Quaries
  ---------------------------- */
@@ -141,6 +221,9 @@ Player section start
   }
   .container {
     padding: 0 1.6rem;
+  }
+  .hero-area {
+    justify-content: center;
   }
   .hero-area .hero-img img {
     width: 33rem;
@@ -152,5 +235,22 @@ Player section start
   }
   .players {
     flex-direction: column;
+  }
+  .hilight-warp {
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+  }
+  .hilight-warp .hilight-img img {
+    width: 32.8rem;
+    height: 24.8rem;
+    margin-top: 2rem;
+  }
+
+  footer img {
+    width: 100%;
+  }
+  footer .social-icons i {
+    margin: 0 0.5rem;
   }
 }
